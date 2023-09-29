@@ -10,6 +10,11 @@ const app = new Koa();
 
 app.use(bodyParser());
 
+// app.use(async (ctx) => {
+//   ctx.body = "Hello World";
+//   console.log(ctx.request);
+// });
+
 app.use(quizRouter.routes());
 app.use(questionRouter.routes());
 app.use(answerRouter.routes());
